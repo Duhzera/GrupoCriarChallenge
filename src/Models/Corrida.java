@@ -3,11 +3,30 @@ package Models;
 import java.time.LocalTime;
 
 public class Corrida {
+	
+	public Corrida(LocalTime hora, int volta, LocalTime tempVolta, double mediaVolta) {
+		super();
+		this.hora = hora;
+		this.volta = volta;
+		this.tempVolta = tempVolta;
+		this.mediaVolta = mediaVolta;
+	}
+
+	public Corrida(LocalTime hora, Piloto piloto, int volta, LocalTime tempVolta, double mediaVolta) {
+		super();
+		this.hora = hora;
+		this.piloto = piloto;
+		this.volta = volta;
+		this.tempVolta = tempVolta;
+		this.mediaVolta = mediaVolta;
+	}
+	
 	public Corrida() {
 		super();
 	}
+	
 	private LocalTime hora;
-	private int idPiloto;
+	private Piloto piloto;
 	private int volta;
 	private LocalTime tempVolta;
 	private double mediaVolta;
@@ -18,11 +37,11 @@ public class Corrida {
 	public void setHora(LocalTime hora) {
 		this.hora = hora;
 	}
-	public int getIdPiloto() {
-		return idPiloto;
+	public Piloto getPiloto() {
+		return piloto;
 	}
-	public void setIdPiloto(int idPiloto) {
-		this.idPiloto = idPiloto;
+	public void setPiloto(Piloto piloto) {
+		this.piloto = piloto;
 	}
 	public int getVolta() {
 		return volta;
