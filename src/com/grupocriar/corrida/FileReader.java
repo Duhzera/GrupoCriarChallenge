@@ -14,13 +14,12 @@ import java.util.List;
 
 public class FileReader {
 	
-	public List<Piloto> LerCorridaTxt(){	
+	public static List<Piloto> LerCorridaTxt(){	
 		List<Piloto> listaPiloto = new ArrayList<Piloto>();
 		
 			try(BufferedReader br = new BufferedReader (new InputStreamReader(
 					new FileInputStream(new File ("C:\\Projeto\\TesteDesenvolvimentoGrupoCriar\\Utils\\Corrida.txt"))));){
 				String linha;
-				
 				while ((linha = br.readLine()) != null) {
 					Piloto piloto = new Piloto();
 					Corrida corrida = new Corrida();

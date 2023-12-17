@@ -8,7 +8,7 @@ public class Piloto {
 	}
 	private int id;
 	private String nome;
-	private ArrayList<Corrida> voltas = new ArrayList<>();
+	private ArrayList<Corrida> voltas = new ArrayList<>();//Todas as voltas com os dados delas
 	
 	public int getId() {
 		return id;
