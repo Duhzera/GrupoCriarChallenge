@@ -2,13 +2,14 @@ package Models;
 
 import java.util.ArrayList;
 
-public class Piloto {
-	public Piloto() {
 
-	}
+public class Piloto {
 	private int id;
 	private String nome;
-	private ArrayList<Corrida> voltas = new ArrayList<>();//Todas as voltas com os dados delas
+	private ArrayList<Volta> voltas = new ArrayList<>();//Todas as voltas com os dados delas
+	
+	public Piloto() {
+	}
 	
 	public int getId() {
 		return id;
@@ -22,15 +23,18 @@ public class Piloto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public ArrayList<Corrida> getVoltas() {
-		return voltas;
+	public int getVoltas() {
+		return this.voltas.size();
 	}
-	public void setVoltas(ArrayList<Corrida> voltas) {
+	public void setVoltas(ArrayList<Volta> voltas) {
 		this.voltas = voltas;
 	}
 	
-	public void adcionar (Corrida c) {
-		this.voltas.add(c);
+	public int adicionarVolta (Volta volta) {
+		this.voltas.add(volta);
+		return getVoltas();
 	}
+	
+	
 	
 }
