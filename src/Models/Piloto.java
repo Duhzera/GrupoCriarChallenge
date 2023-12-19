@@ -37,9 +37,9 @@ public class Piloto {
 	public String toString() {
         return "Piloto{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' /*+
+                ", nome='" + nome + '\'' +
                 ", voltas=" + voltas.toString() +
-                '}'*/;
+                '}';
     }
 	
 	

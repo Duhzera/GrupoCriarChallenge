@@ -47,26 +47,27 @@ public class FileReader {
 	    			volta.setHora(hora);
 	    			volta.setTempVolta(tempVolta);
 	    			volta.setMediaVolta(mediaVolta);
-	    			boolean pilotoExiste = false;	
-	    			 for (Piloto p : listaPiloto) {
+	    			
+	    			boolean pilotoExiste = false;	//Da linha 51 até a linha 57 estou verificando se o piloto que está na linha atual já existe na listaPiloto
+	    			for (Piloto p : listaPiloto) {
 	    		            if (p.getId() == piloto.getId()) {
 	    		            	pilotoExiste = true;
 	    		                break;
 	    		            }
-	    		        }
+	    		    }
 	    			if (!pilotoExiste) {//Insere o piloto somente se ele ainda não estiver na lista
 	    				listaPiloto.add(piloto);
-	    				System.out.println(piloto.toString());
+	    				
 	    			}
 	    			
-	    			/* for (Piloto p : listaPiloto){
+	    			for (Piloto p : listaPiloto){
 	    				if (p.getId() == piloto.getId()) {
 	    					if (maxVoltas < p.adicionarVolta(volta)) {
 	    						maxVoltas ++; 
-	    						//p.adicionarVolta(volta);
 	    					}
 	    				}
-	    			}*/
+	    			}
+	    			
 
 				}
 			}

@@ -1,5 +1,6 @@
 package Models;
 
+import java.time.Duration;
 import java.time.LocalTime;
 
 public class Volta {
@@ -44,4 +45,9 @@ public class Volta {
 				" Tempo da Volta: " + this.tempVolta + 
 				" Tempo Médio da volta: " + this.mediaVolta;
 	}
+	public Duration convertDuration(LocalTime d) {
+		Duration valorConvertido = Duration.ofHours(d.getHour()).plusMinutes(d.getMinute()).plusSeconds(d.getSecond()).plusNanos(d.getNano());
+		return valorConvertido;
+	}
+	
 }

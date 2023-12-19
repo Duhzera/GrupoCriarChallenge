@@ -13,9 +13,11 @@ import java.util.List;
 public class main {
 	public static void main (String[]args){
 		String caminhoArquivo = "C:\\Projeto\\TesteDesenvolvimentoGrupoCriar\\Utils\\Corrida.txt";
+		ArrayList<Piloto> listaPilotos = new ArrayList<>();
 		FileReader f = new FileReader();
 		try(BufferedReader br = new BufferedReader (new InputStreamReader(new FileInputStream(new File (caminhoArquivo))));){
-			ArrayList<Piloto> listaPilotos = (ArrayList<Piloto>) f.LerCorridaTxt(br);
+			listaPilotos = (ArrayList<Piloto>) f.LerCorridaTxt(br);
+			
 
 		}
 	
@@ -23,6 +25,8 @@ public class main {
 		catch (Exception e) {
 			System.out.println("Erro de leitura de arquivo");
 		}
+		
+		System.out.println(listaPilotos.get(2).getVoltas());
 		
 	}
 }
