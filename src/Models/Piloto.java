@@ -34,6 +34,13 @@ public class Piloto {
 		this.voltas.add(volta);
 		return getVoltas();
 	}
+	public String toString() {
+        return "Piloto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' /*+
+                ", voltas=" + voltas.toString() +
+                '}'*/;
+    }
 	
 	
 	

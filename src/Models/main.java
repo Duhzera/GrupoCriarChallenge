@@ -16,10 +16,13 @@ public class main {
 		FileReader f = new FileReader();
 		try(BufferedReader br = new BufferedReader (new InputStreamReader(new FileInputStream(new File (caminhoArquivo))));){
 			ArrayList<Piloto> listaPilotos = (ArrayList<Piloto>) f.LerCorridaTxt(br);
+
 		}
+	
 		
 		catch (Exception e) {
 			System.out.println("Erro de leitura de arquivo");
 		}
+		
 	}
 }

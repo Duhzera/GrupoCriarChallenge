@@ -39,5 +39,9 @@ public class Volta {
 	public void setMediaVolta(double mediaVolta) {
 		this.mediaVolta = mediaVolta;
 	}
-	
+	public String toString() {
+		return " Horário da Corrida: " + this.hora + 
+				" Tempo da Volta: " + this.tempVolta + 
+				" Tempo Médio da volta: " + this.mediaVolta;
+	}
 }

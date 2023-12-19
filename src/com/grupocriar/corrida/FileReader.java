@@ -16,12 +16,12 @@ public class FileReader {
 	
 	public List<Piloto> LerCorridaTxt(BufferedReader br){	
 		List<Piloto> listaPiloto = new ArrayList<Piloto>();
-		int maxVoltas = 0;
+		int maxVoltas = 0; // Variavel que informa o número de voltas do primeiro Lugar;
 		try {
 			String linha;
 			linha = br.readLine();// Instrução para ignorar a primeira Linha
 			
-			while ((linha = br.readLine()) != null) {
+			while ((linha = br.readLine()) != null && maxVoltas != 4) {
 				Piloto piloto = new Piloto();
 				Volta volta = new Volta();
 				
@@ -47,15 +47,27 @@ public class FileReader {
 	    			volta.setHora(hora);
 	    			volta.setTempVolta(tempVolta);
 	    			volta.setMediaVolta(mediaVolta);
-	    			if (!listaPiloto.contains(piloto)) {//Insere o piloto somente se ele ainda não estiver na lista
+	    			boolean pilotoExiste = false;	
+	    			 for (Piloto p : listaPiloto) {
+	    		            if (p.getId() == piloto.getId()) {
+	    		            	pilotoExiste = true;
+	    		                break;
+	    		            }
+	    		        }
+	    			if (!pilotoExiste) {//Insere o piloto somente se ele ainda não estiver na lista
 	    				listaPiloto.add(piloto);
+	    				System.out.println(piloto.toString());
 	    			}
-	    			for (Piloto p : listaPiloto){
+	    			
+	    			/* for (Piloto p : listaPiloto){
 	    				if (p.getId() == piloto.getId()) {
-	    					p.adicionarVolta(volta);
-	    					
+	    					if (maxVoltas < p.adicionarVolta(volta)) {
+	    						maxVoltas ++; 
+	    						//p.adicionarVolta(volta);
+	    					}
 	    				}
-	    			}
+	    			}*/
+
 				}
 			}
 		}
