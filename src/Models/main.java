@@ -2,6 +2,7 @@ package Models;
 
 import com.grupocriar.corrida.*;
 import java.io.InputStreamReader;
+import java.time.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.io.BufferedReader;
@@ -25,8 +26,16 @@ public class main {
 		catch (Exception e) {
 			System.out.println("Erro de leitura de arquivo");
 		}
-		
-		System.out.println(listaPilotos.get(2).getVoltas());
+		for (int i = 0; i < listaPilotos.size(); i++) { 
+			if (!listaPilotos.isEmpty()) {
+	            Piloto piloto = listaPilotos.get(i);
+	            if (piloto.getNumeroVoltas() =)
+	            LocalTime tempoTotalVoltas = Volta.somaVoltas(piloto);
+	            System.out.println("Tempo total de prova " + piloto.getNome() + ": " + tempoTotalVoltas);
+	        } else {
+	            System.out.println("A lista de pilotos está vazia.");
+	        }
+		}
 		
 	}
 }

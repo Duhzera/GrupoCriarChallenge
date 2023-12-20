@@ -23,16 +23,19 @@ public class Piloto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getVoltas() {
+	public int getNumeroVoltas() {
 		return this.voltas.size();
 	}
 	public void setVoltas(ArrayList<Volta> voltas) {
 		this.voltas = voltas;
 	}
+	public ArrayList<Volta>getVoltas(){
+		return this.voltas;
+	}
 	
 	public int adicionarVolta (Volta volta) {
 		this.voltas.add(volta);
-		return getVoltas();
+		return getNumeroVoltas();
 	}
 	public String toString() {
         return "Piloto{" +

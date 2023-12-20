@@ -57,18 +57,16 @@ public class FileReader {
 	    		    }
 	    			if (!pilotoExiste) {//Insere o piloto somente se ele ainda não estiver na lista
 	    				listaPiloto.add(piloto);
-	    				
+		
 	    			}
 	    			
-	    			for (Piloto p : listaPiloto){
+	    			for (Piloto p : listaPiloto){//Verifica e adiciona se o piloto já está na lista se estiver ele adiciona a volta no piloto existente
 	    				if (p.getId() == piloto.getId()) {
 	    					if (maxVoltas < p.adicionarVolta(volta)) {
 	    						maxVoltas ++; 
 	    					}
 	    				}
 	    			}
-	    			
-
 				}
 			}
 		}
