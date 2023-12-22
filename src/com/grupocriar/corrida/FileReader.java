@@ -104,7 +104,7 @@ public class FileReader {
 							setTempoTotalCorrida(pilotoAux.getTempoTotalCorrida());
 							setVencedor(pilotoAux);
 							
-							for (Piloto p : listaPiloto) {
+							for (Piloto p : listaPiloto) {//cria uma cópia indepente da listaPilotos, chamado posicaoPilotos para poder receber as informações dos Pilotos até que o primeiro de 4 voltas
 								ArrayList<Volta> lv = new ArrayList<Volta>();
 								for (Volta v : p.getVoltas()) {
 									lv.add(new Volta(v.getHora(),v.getTempVolta(),v.getMediaVolta()));
