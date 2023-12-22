@@ -46,7 +46,6 @@ public class Corrida {
 			System.out.println(posicao + "º Lugar: ID " + aux.getId() + " | Nome: "
 					+ aux.getNome() + " \t| Qtde Voltas Completadas: " + aux.getNumeroVoltas() + " | Tempo de Prova: "
 					+ f.converterMilissegundos(aux.getTempoTotalCorrida()));
-			//if(p.getNumeroVoltas() == vencedor.getNumeroVoltas() -1){
 			posicao ++;
 			aux.setNumeroVoltas(0);
 		}
