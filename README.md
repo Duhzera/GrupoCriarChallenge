@@ -1,5 +1,5 @@
 # Projeto leitura e análise um log corrida de Kart
-##Sobre
+## Sobre
 Projeto criado para receber um log dividir, direcionar as informações extraídas para suas respectivas classes e criar métodos que auxilia em trazer todas as informações solicitadas.
 
 ## Classe FileReader
