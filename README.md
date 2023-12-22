@@ -11,7 +11,7 @@ Onde respectivamente o piloto recebe os dados dos Piloto e cria os metodos neces
 Classe Volta que contém apenas os getters e setters para auxiliar a classe Piloto e FileReader.
 Classe Corrida (main) responsável por agrupar e apresentar os dados solicitaods 
 
-##Saída do programa
+## Saída do programa
 
 
 ![logDeSaída](https://github.com/Duhzera/GrupoCriarChallenge/assets/96965856/c9ab60be-0562-4eb7-ac8f-cb5c868117a2)
